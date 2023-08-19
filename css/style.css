@@ -1,0 +1,130 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+/*header start*/
+header{
+	background-color: #f2f1fd;
+}
+.logo{
+	font-size: 30px !important;
+	font-weight: 800;
+	font-style: italic;
+	color: #063f69 !important;
+}
+.menu{
+	display: flex;
+	float: right;
+}
+.menu ul li a{
+	font-size: 14px;
+	font-weight: 600;
+	color: #4876ec !important;
+	padding: 0 20px !important;
+	transition: .5s;
+}
+.menu ul li a:hover{
+	color: #063f69 !important;
+}
+.r_g_btn{
+	border: 1px solid #063f69 !important;
+	border-radius: 20px;
+	margin-right: 10px !important;
+}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	.r_g_btn{
+		margin-bottom: 5px !important;
+	}
+}
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.r_g_btn{
+		margin-bottom: 5px !important;
+	}
+}
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.r_g_btn{
+		margin-bottom: 5px !important;
+	}
+}
+
+/*header end*/
+/*slider start*/
+.slider_text{
+	font-family: serif;
+}
+.slider_text h5{
+	font-style: italic;
+}
+/*slider end*/
+/*singleCardText start*/
+.singleCardText h5{
+	font-style: italic;
+	font-weight: 800;
+	color: #063f69;
+}
+.singleCardText p{
+	font-weight: 600;
+	color: #000;
+}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	.SCimg{
+		height: 140px !important;
+	}
+	.singleCardText p{
+		font-size: 12px;
+	}
+}
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.singleCardText p{
+		font-size: 14px;
+	}
+}
+/*singleCardText end*/
+/*card start*/
+.cardH2{
+	font-weight: 800 !important;
+	color: #063f69 !important;
+}
+/*card end*/
+/*newsLetter start*/
+.newsLetter{
+	background-image: url("../images/newsletter.jpg");
+	background: cover;
+	background-repeat: no-repeat;
+}
+.NLheading h2{
+	font-weight: 800;
+}
+.NLform input{
+	background: #2c6cff;
+	border:none;
+	border-radius: 20px;
+	padding: 5px;
+	width: 300px
+
+}
+.NLform a{
+	font-size: 12px;
+	background: #ffffff;
+	border-radius: 20px;
+	text-decoration: none;
+	padding: 9px 13px;
+	margin-left: -69px
+}
+/*newsLetter end*/
+/*footer start*/
+footer div p:last-child{
+	color: #063f69;
+	margin-top: -15px
+}
+/*footer end*/

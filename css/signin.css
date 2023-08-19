@@ -1,0 +1,29 @@
+.divider:after,
+.divider:before {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background: #eee;
+}
+.customHomeBtn{
+	background-color: #063f69 !important; 
+	border-color: #063f69 !important;
+	border-radius: 20px !important;
+}
+input{
+	border-color: #063f69 !important;
+	border-radius: 20px;
+}
+.custom_ph_text{
+	font-size: 16px !important;
+	border-radius: 20px !important;
+}
+.chkbox{
+	background-color: #063f69 !important;
+	border-color: #063f69 !important;
+}
+.signin-btn{
+	background-color: #063f69 !important; 
+	border-color: #063f69 !important; 
+	border-radius: 20px !important;
+}
