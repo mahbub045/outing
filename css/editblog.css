@@ -56,7 +56,7 @@ header{
 }
 
 /*header end*/
-/*newBlog*/
+/*updateBlog*/
 .newBlog textarea{
 	height: 200px !important;
 	border-color: #063f69 !important;
@@ -71,36 +71,7 @@ header{
 	border-radius: 20px;
 
 }
-/*newBlog end*/
-/*my blogs start*/
-.cardH2{
-	font-weight: 800 !important;
-	color: #063f69 !important;
-}
-.delButton{
-	color: #063f69;
-	padding: 2px 5px;
-	margin-right: 5px;
-	transition: 0.5s;
-	border:1px solid #063f69 !important;
-}
-.delButton:hover{
-	background-color: #063f69;
-	color: red;
-}
-.EditButton{
-	color: #063f69;
-	padding: 2px 5px;
-	margin-right: 5px;
-	border:1px solid #063f69 !important;
-	transition: 0.5s;
-}
-.EditButton:hover{
-	background-color: #063f69;
-	color: #ffffff;
-	border-color: black;
-}
-/*my blogs end*/
+/*updateBlog end*/
 /*newsLetter start*/
 .newsLetter{
 	background-image: url("../images/newsletter.jpg");

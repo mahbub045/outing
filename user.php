@@ -47,9 +47,9 @@ $connection -> query($selectBlogs);
 $resultBlogs = $connection -> query($selectBlogs);
 // view blog end
 // delete blog
-if (isset($_GET['id'])) {
-  $del_id=$_GET['id'];
-  $delete_from_floder=$_GET['blgImg'];
+if (isset($_GET['del_id'])) {
+  $del_id = $_GET['del_id'];
+  $delete_from_floder = $_GET['blgImg'];
 
   $deletesql="DELETE FROM blogs WHERE id=$del_id";
   if ($connection-> query($deletesql)) {
@@ -60,10 +60,6 @@ if (isset($_GET['id'])) {
     die($connection-> error);
   }
  }
-  else{
-  header("location:user.php");
- }
-
 // delete blog end
 
 ?>
@@ -144,7 +140,7 @@ if (isset($_GET['id'])) {
         </div>
         <div class="mb-3">
           <label for="blgText" class="form-label">Enter your text here</label>
-          <textarea class="form-control" name="blgText" id="blgText" placeholder="Enter Blog Text" required></textarea>
+          <textarea class="form-control" name="blgText" id="blgText" placeholder="Enter Blog Text" maxlength="150" required></textarea>
         </div>
         <div class="mb-3">
           <label for="img" class="form-label">Add Image</label>
@@ -183,8 +179,8 @@ if (isset($_GET['id'])) {
             <span class="text-primary"><?php echo $blog['username']?></span>
           </p>
           <div class="text-center">
-            <a onclick="return comfirm('Are you sure?')" class="delButton" title="Delete" href="user.php?del_id=<?php echo $blog['id'];?>& blgImg=<?php echo $blog['blgImg']; ?>"><i class="fa-solid fa-trash"></i></a>
-            <a class="EditButton" href="editblog.php" title="Edit"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a onclick="return comfirm('Are you sure?')" class="delButton" title="Delete" href="user.php?del_id=<?php echo $blog['id'];?>& blgImg=<?php echo $blog['blgImg'] ?>"><i class="fa-solid fa-trash"></i></a>
+            <a class="EditButton" href="editblog.php?id=<?php echo $blog['id']; ?>" title="Edit"><i class="fa-solid fa-pen-to-square"></i></a>
           </div> 
         </div>
       </div>

@@ -1,6 +1,14 @@
 <?php
+session_start();
+if (isset($_SESSION['auth_users_session'])) {
+  if ($_SESSION['auth_users_session']!=1) {
+    header("location:signin.php");
+  }
+}
 //data Config
 include("dataconfig.php"); //Required 
+// For username
+$username=isset($_SESSION['username'])?$_SESSION['username']:"";
 // view blog
 $selectBlogs = "SELECT * FROM blogs";
 $connection -> query($selectBlogs);
@@ -57,12 +65,18 @@ $resultBlogs = $connection -> query($selectBlogs);
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
               </li>
+              <?php if(isset($_SESSION['auth_users_session']) && $_SESSION['auth_users_session']): ?>
               <li class="nav-item r_g_btn">
-                <a class="nav-link " href="signin.php">Sign in</a>
+                <a class="nav-link " href="signin.php"><?php echo $username ?></a>
+              </li>
+              <?php else: ?>
+              <li class="nav-item r_g_btn">
+                <a class="nav-link" href="signin.php">Sign in</a>
               </li>
               <li class="nav-item r_g_btn">
                 <a class="nav-link" href="signup.php">Sign up</a>
               </li>
+            <?php endif; ?>
             </ul>
           </div>
         </div>
