@@ -3,9 +3,9 @@
 $host="localhost";
 $user="root";
 $pass="";
-$datab="outing";
+$dataBaseName="outing";
 
-$connection=new mysqli($host,$user,$pass,$datab);
+$connection=new mysqli($host,$user,$pass,$dataBaseName);
 
 if($connection -> connect_error ){
 	die($connection -> error);

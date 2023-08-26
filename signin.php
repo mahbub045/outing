@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "dataconfig.php";
-$errormsg="";
+$errormsg = "";
 
 
   //sessions
@@ -28,21 +28,21 @@ if(isset($_POST['signbtn'])){
 
   $resultLogin_users=$connection-> query($fetchFrom_users);
 
-  if ($resultLogin_users-> num_rows>0) {
-    while ($result=$resultLogin_users->fetch_assoc()) {
-      $username=$result['name'];
+  if ($resultLogin_users -> num_rows > 0) {
+    while ($result = $resultLogin_users -> fetch_assoc()) {
+      $username = $result['name'];
     }
 
     $_SESSION['username']=$username;
 
-    $_SESSION['auth_users_session']=1;
-    if($rememberMe==1){
+    $_SESSION['auth_users_session'] = 1;
+    if($rememberMe == 1){
       setcookie('auth_users_cookie', true, time()+(60*60*24*15),'/');
     }
     header("location:user.php"); 
   } 
   else{
-    $errormsg="Invalid Login Credentials. IF You are new User. Please! Sign up.";
+    $errormsg = "Invalid Login Credentials. IF You are new User. Please! Sign up.";
   }
 }
 ?>
